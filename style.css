@@ -7,17 +7,21 @@
 
 .main{
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   position:fixed;
   height: 600px;
-  width: 400px;
+  width: 20%;
   background-color: #97c0fd;
   top: 10rem;
   border-radius: .3rem;
   padding: 1.5rem;
-  ;
   animation-name: move;
   animation-duration: 1s;
 }
+
+
 @keyframes move{
   0% {background-color: #97c0fd; left: -700px;}
   100% {background-color: aqua; left: 0px;}

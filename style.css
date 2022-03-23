@@ -1,26 +1,48 @@
 *{
   padding: 0px;
   margin: 0px;
+  font-family: 'calibri';
 }
 
-.main{
 
-  width: 800px;
-  background-color: #3385ff;
-  margin:auto;
-  margin-top: 100px;
-  text-align: center;
+.main{
+  display: flex;
+  position:fixed;
+  height: 600px;
+  width: 400px;
+  background-color: #97c0fd;
+  top: 10rem;
+  border-radius: .3rem;
+  padding: 1.5rem;
+  ;
+  animation-name: move;
+  animation-duration: 1s;
+}
+@keyframes move{
+  0% {background-color: #97c0fd; left: -700px;}
+  100% {background-color: aqua; left: 0px;}
+}
+
+p{
+  margin:2em;
 }
 table, td, th{
   border: 2px solid;
-padding: 20px;
+  padding: 20px;
+  margin:auto;
 }
 td{
-  padding-top:50px;
+  padding:50px;
+}
+table{
+  
+  width:50%;
+  border-collapse: collapse;
 }
 
-table{
-
-  width:100%;
-  border-collapse: collapse;
+.br{
+  display: block;
+  height: 800px;
+  width: 100%;
+  box-sizing: border-box;
 }

@@ -11,7 +11,8 @@
   justify-content: center;
   align-items: center;
   position:fixed;
-  height: 600px;
+  line-height: 1fr;
+  height: 800px;
   width: 20%;
   background-color: #97c0fd;
   top: 10rem;
@@ -19,14 +20,16 @@
   padding: 1.5rem;
   animation-name: move;
   animation-duration: 1s;
+  animation-delay: 2ms;
 }
-
-
 @keyframes move{
   0% {background-color: #97c0fd; left: -700px;}
   100% {background-color: aqua; left: 0px;}
 }
-
+.main:hover{
+  transform:scale3d(1.1,1.1,1.1);
+  transition: transform .5s ease-in-out;
+}
 p{
   margin:2em;
 }

@@ -2,41 +2,60 @@
   padding: 0px;
   margin: 0px;
   font-family: 'calibri';
-  --bg-color: #c72424;
+  --bg-color: #b44200;
 }
 
+/***color the whole page black***/
+/*body{
+  background-color: black;
+}*/
+
+
 .main{
+  /***Stops the flashing during Animation***/
+  backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+
+  /***The Box***/
   display: flex;
+  position: relative;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
-  position:fixed;
-  line-height: 3rem;
-  height: 500px;
-  max-width: 20%;
+  text-align: center; 
+  height: 400px;
+  max-width: 50%;
   background-color: var(--bg-color);
+  margin:auto;
   top: 10rem;
   border-radius: .3rem;
   padding: 1.5rem;
+  line-height: 2rem;
+
+  /***Animation***/
   animation-name: move;
-  animation-duration: 1s;
-  animation-delay: 2ms;
+  animation-duration: 1.2s;
+  animation-delay: 50ms;
   z-index: 2;
+  
+
 }
+  /***Animation***/
 @keyframes move{
   0% {background-color: #ffffff; left: -700px;}
   100% {background-color: var(--bg-color); left: 0px;}
 }
 .main:hover{
-  transform:scale3d(1.03,1.03,1.03);
+  transform:scale3d(1.02,1.02,1.02);
+  transition: transform .5s ease-in-out;
+  transform-style:preserve-3d;
+}
+.main:hover:after{
   transition: transform .5s ease-in-out;
 }
-.main:after{
-  transform:scale3d(1,1,1);
-  transition: transform .5s ease-out;
-}
 
+/***Table***/
 p{
   margin:2em;
 }
@@ -56,20 +75,22 @@ table{
 }
 
 .br{
+  height:1000px;
+  width:100%;
   
-  background-image:url("images/nasa-Q1p7bh3SHj8-unsplash.jpg");
-  background-position: absolute;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  max-width: 100%;
-  height: 1000px;
-  margin:auto;
-  padding:0px;
- 
-  z-index: 1;
-  margin-bottom:20rem;
 }
-
-
-
+/***Light Mode and Dark Mode***/
+.container{
+  display: block;
+  position: relative;
+  margin:auto;
+  padding: 10px;
+}
+.checkbox{
+  display:block;
+  padding:10px;
+}
+.dark-mode{
+  background-color: black;
+  color:white;
+}

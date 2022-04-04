@@ -2,15 +2,40 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Steven Helliwell</title>
+    
   </head>
 <link rel="stylesheet" href="style.css">
+<link rel="script" href="script.js">
+
 
   <body>
+    <script>
+      function myFunction() {
+         var element = document.body;
+         element.classList.toggle("dark-mode");
+      }
+      </script>
+
+    <button onclick="myFunction()">Toggle dark mode</button>
+
+    
+
+
+
+    <aside>
+    <label class="container">Light Mode
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    </label>
+    <label class="container">Dark Mode
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    </label>
+    </aside>
 
     <div class="main">
-
-
     <h1>Steven Helliwell</h1>
     <h3>Software Engineer</h3>
     <br>
@@ -20,6 +45,7 @@
     <div class="br">
       <br>
     </div>
+
     <table>
       <tr>
         <th><a href="project1.html">Project 1</a></th>

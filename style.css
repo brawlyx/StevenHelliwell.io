@@ -2,7 +2,8 @@
   padding: 0px;
   margin: 0px;
   font-family: 'calibri';
-  --bg-color: #b44200;
+
+  --bg-color: #7c7c7c;
 }
 
 /***color the whole page black***/
@@ -24,7 +25,8 @@
   justify-content: center;
   align-items: center;
   text-align: center; 
-  height: 400px;
+  height: 20%;
+  min-width: 50%;
   max-width: 50%;
   background-color: var(--bg-color);
   margin:auto;
@@ -32,14 +34,15 @@
   border-radius: .3rem;
   padding: 1.5rem;
   line-height: 2rem;
+  margin-bottom: 20em;
+
 
   /***Animation***/
   animation-name: move;
   animation-duration: 1.2s;
-  animation-delay: 50ms;
+  animation-delay: .5s;
   z-index: 2;
   
-
 }
   /***Animation***/
 @keyframes move{
@@ -62,35 +65,52 @@ p{
 
 table, td, th{
   border: 2px solid;
+  border-radius: 0.3rem;
   padding: 20px;
   margin:auto;
 }
 td{
   padding:50px;
 }
+td:hover{
+  transform: scale3d(1.03,1.03,1.03);
+  transition: transform .5s ease-in-out, background-color .5s linear;
+  background-color: var(--bg-color);
+}
 table{
-  
   width:50%;
-  border-collapse: collapse;
+  
 }
 
-.br{
-  height:1000px;
-  width:100%;
-  
-}
 /***Light Mode and Dark Mode***/
-.container{
-  display: block;
-  position: relative;
-  margin:auto;
-  padding: 10px;
-}
-.checkbox{
-  display:block;
-  padding:10px;
-}
+
 .dark-mode{
   background-color: black;
   color:white;
+}
+
+/***Scroll to the top and bottom***/
+.scroll-to-the-top, .scroll-to-the-bottom{
+  position:fixed;
+  margin:10px;
+  padding:10px;
+}
+.scroll-to-the-bottom:hover{
+  cursor:pointer;
+}
+.scroll-to-the-top:hover{
+  cursor:pointer;
+}
+.scroll-to-the-top{
+  bottom:50px;
+}
+
+.scroll-to-the-bottom{
+  bottom:10px;
+}
+
+
+/**** Project ***/
+.projectcontainer{
+  margin-top: 10em;
 }

@@ -3,38 +3,24 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+      <link rel="stylesheet" href="style.css">
+      <script src="script.js"></script>
     <title>Steven Helliwell</title>
     
   </head>
-<link rel="stylesheet" href="style.css">
-<link rel="script" href="script.js">
-
 
   <body>
-    <script>
-      function myFunction() {
-         var element = document.body;
-         element.classList.toggle("dark-mode");
-      }
-      </script>
-
-    <button onclick="myFunction()">Toggle dark mode</button>
-
     
 
+    <!-- Dark Mode / Light Mode-->
+    <button onclick="myFunction()">Toggle dark mode <span class="material-icons-two-tone">
+      lightbulb
+      </span></button>
 
 
-    <aside>
-    <label class="container">Light Mode
-      <input type="checkbox" checked="checked">
-      <span class="checkmark"></span>
-    </label>
-    <label class="container">Dark Mode
-      <input type="checkbox" checked="checked">
-      <span class="checkmark"></span>
-    </label>
-    </aside>
-
+      <!--- Main  top -->
     <div class="main">
     <h1>Steven Helliwell</h1>
     <h3>Software Engineer</h3>
@@ -42,24 +28,37 @@
     <p>Lorem ipsumempor mollit anim id est laborum.</p>
     </div>
 
-    <div class="br">
-      <br>
-    </div>
-
+    <!-- Table -->
     <table>
-      <tr>
-        <th><a href="project1.html">Project 1</a></th>
-        <th>Project 2</th>
-        <th>Project 3</th>
-      </tr>
-        <tr>
-          <td><a href="project1.html">talk about first project<br>Lorem ipsum dolor sit amet,</a></td>
-          <td>talk about second project</td>
-          <td>talk about third project</td>
-        </tr>
-        
+      <td>Projects</td>
+      <td>Resume</td>
+      <td>Contact Me</td>
     </table>
 
+
+    <!--- Scroll-->
+    <div class="scroll-to-the-top" onclick="window.scroll({top, behvaiour:'smooth'});">▲</div>
+    <div class="scroll-to-the-bottom" onclick="window.scroll(document.body.scrollHeight);">▼</div>
+    
+    <div class="projectcontainer">
+      <table>
+        
+        <td>Projects</td>
+        <tr>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+        </tr>
+        
+      </table>
+    </div>
 
   </body>
 

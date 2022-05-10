@@ -11,6 +11,11 @@
   background-color: black;
 }*/
 
+/**** NAVBAR *****/
+
+nav{
+
+}
 
 .main{
   /***Stops the flashing during Animation***/
@@ -19,22 +24,22 @@
   -webkit-backface-visibility: hidden;
 
   /***The Box***/
-  display: flex;
-  position: relative;
-  flex-direction: column;
+  position: absolute;
   justify-content: center;
   align-items: center;
   text-align: center; 
   height: 20%;
-  min-width: 50%;
-  max-width: 50%;
+  width:50%;
+  min-width: 200px;
+  max-width:100%;
   background-color: var(--bg-color);
   margin:auto;
-  top: 10rem;
+  margin-top: 20px;
+  margin-left: 20px;
   border-radius: .3rem;
   padding: 1.5rem;
   line-height: 2rem;
-  margin-bottom: 20em;
+  
 
 
   /***Animation***/
@@ -57,6 +62,15 @@
 .main:hover:after{
   transition: transform .5s ease-in-out;
 }
+
+/****THREEJS 3D****/
+canvas{
+height:500px;
+width:400px;
+}
+
+
+
 
 /***Table***/
 p{
@@ -113,4 +127,16 @@ table{
 /**** Project ***/
 .projectcontainer{
   margin-top: 10em;
+}
+
+
+/**** Project New Year****/
+.countdowncontainer{
+  align-items: center;
+  background-color: #7c7c7c;
+  background-size: cover;
+  background-position: center center;
+  display: flex;
+  flex-direction: column;
+  
 }

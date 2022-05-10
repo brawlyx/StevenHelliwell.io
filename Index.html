@@ -13,24 +13,62 @@
 
   <body>
     
+  <!--- Main  top -->
+  <div class="main">
+    <h1>Steven Helliwell</h1>
+    <h3>Software Engineer</h3>
+    <br>
+    <p>Lorem ipsumempor mollit anim id est laborum.</p>
+  </div>
+    <nav>
+      <li>home</li>
+      <li>projects</li>
+      <li>Contact</li>
+    </nav>
 
+    
+
+ 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/102/three.js"></script>
+    <script src="https://github.com/mrdoob/three.js/blob/master/examples/jsm/capabilities/WebGL.js"></script>
+
+   
+    <script> 
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
+
+      const renderer = new THREE.WebGLRenderer();
+      renderer.setSize( window.innerWidth, window.innerHeight );
+      document.body.appendChild( renderer.domElement );
+        const geometry = new THREE.BoxGeometry();
+        const material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
+        const cube = new THREE.Mesh( geometry, material );
+      scene.add( cube );
+
+        camera.position.z = 5;
+        function animate() {
+        	requestAnimationFrame( animate );
+          cube.rotation.x += 0.01;
+          cube.rotation.y += 0.01;
+        renderer.render( scene, camera );
+}
+    animate();
+    </script>
+    
+    
+    <br>
     <!-- Dark Mode / Light Mode-->
     <button onclick="myFunction()">Toggle dark mode <span class="material-icons-two-tone">
       lightbulb
       </span></button>
 
 
-      <!--- Main  top -->
-    <div class="main">
-    <h1>Steven Helliwell</h1>
-    <h3>Software Engineer</h3>
-    <br>
-    <p>Lorem ipsumempor mollit anim id est laborum.</p>
-    </div>
+    
 
     <!-- Table -->
     <table>
-      <td>Projects</td>
+      <td><a href="project1.html">Projects</a></td>
       <td>Resume</td>
       <td>Contact Me</td>
     </table>
@@ -38,12 +76,12 @@
 
     <!--- Scroll-->
     <div class="scroll-to-the-top" onclick="window.scroll({top, behvaiour:'smooth'});">▲</div>
-    <div class="scroll-to-the-bottom" onclick="window.scroll(document.body.scrollHeight);">▼</div>
+    <div class="scroll-to-the-bottom" onclick="window.scrollTo(0, document.body.scrollHeight);">▼</div>
     
     <div class="projectcontainer">
       <table>
         
-        <td>Projects</td>
+        <td><a href="project1.html">Projects</a></td>
         <tr>
           <td></td>
         </tr>
@@ -60,6 +98,7 @@
       </table>
     </div>
 
+    <a href="project1.html">Projects</a>
   </body>
 
 
